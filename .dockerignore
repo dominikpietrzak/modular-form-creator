@@ -1,0 +1,14 @@
+# Rebuilt inside the image so Linux-native binaries are installed, not the host's macOS ones.
+node_modules
+dist
+dist-ssr
+storybook-static
+
+# Not part of the frontend image (the backend has its own Dockerfile and build context).
+backend
+
+.git
+*.log
+.env
+.env.*
+!.env.example

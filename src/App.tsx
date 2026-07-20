@@ -1,23 +1,14 @@
-import styled from 'styled-components'
+import { RouterProvider } from 'react-router-dom'
+import { AppProviders } from './app/AppProviders'
+import { router } from './app/router'
 
+// Application root: providers wrapped around the router.
 function App() {
   return (
-    <AppShell>
-      <Message>Good luck!</Message>
-    </AppShell>
+    <AppProviders>
+      <RouterProvider router={router} />
+    </AppProviders>
   )
 }
-
-const AppShell = styled.div`
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const Message = styled.h1`
-  font-size: 2.5rem;
-  color: ${({ theme }) => theme.colors.inkStrong};
-`
 
 export default App
